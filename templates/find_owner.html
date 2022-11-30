@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Insert Main Page{% endblock %}
+{% block content %}
+<div>
+    <form align = "center" method = "POST" action = "{{url_for('find_owner_server')}}">
+        <h3>Owner id: <input type = "text" name = "o_id" required></input></h3>
+        <input type = "submit" value = "find_owner_server">
+    </form>
+</div>
+
+<table border = 1>
+    <thead>
+        <td>owner_id</td>
+        <td>owner_fname</td>
+        <td>owner_lname</td>
+        <td>league_name</td>
+    </thead>
+
+{% for row in res %}
+    <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

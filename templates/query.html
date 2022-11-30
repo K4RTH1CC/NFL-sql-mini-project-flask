@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Insert Main Page{% endblock %}
+{% block content %}
+<div>
+    <form align = "center" method = "POST" action = "{{url_for('query_server')}}">
+        <h3>Query: <input type = "text" name = "query" required></input></h3>
+        <input type = "submit" value = "Enter Query">
+    </form>
+</div>
+<table align = "center">
+    <tr>
+    {% for item in head %}
+    <th>{{item[0]}}</th>
+    {% endfor %}
+    </tr>
+    {% for row in res %}
+    <tr>
+        {% for i in row %}
+        <td>{{i}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

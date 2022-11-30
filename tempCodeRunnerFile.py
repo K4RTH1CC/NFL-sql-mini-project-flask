@@ -1,0 +1,1 @@
+return render_template("insert_player.html")

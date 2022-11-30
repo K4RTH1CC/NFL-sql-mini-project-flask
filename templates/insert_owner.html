@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Insert Main Page{% endblock %}
+{% block content %}
+<div>
+    <form align = "center" method = "POST" action = "{{url_for('insert_owner_server')}}">
+        <h3>Owner ID: <input type = "number" name = "owner_id" id = "owner_id" required></h3>
+        <h3>Owner first name: <input type = "text" name = "o_fname" id = "o_fname" required></h3>
+        <h3>Owner last name: <input type = "text" name = "o_lname" id = "o_lname" required></h3>
+        <h3>League: <input type = "text" name = "league_name" id = "league_name"></h3>
+        <input type = "submit" value = "insert_league_server">
+    </form>
+</div>
+{% endblock %}

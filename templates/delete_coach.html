@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Insert Main Page{% endblock %}
+{% block content %}
+<div>
+    <form align = "center" method = "POST" action = "{{url_for('delete_coach_server')}}">
+        <h3>Employee number: <input type = "text" name = "e_num" required></input></h3>
+        <input type = "submit" value = "delete_coach_server">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Insert Main Page{% endblock %}
+{% block content %}
+<div>
+    <form align = "center" method = "POST" action = "{{url_for('delete_season_server')}}">
+        <h3>Season Year: <input type = "text" name = "s_y" required></input></h3>
+        <input type = "submit" value = "delete_season_server">
+    </form>
+</div>
+{% endblock %}

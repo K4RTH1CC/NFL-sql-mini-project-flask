@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}update Main Page{% endblock %}
+{% block content %}
+<div>
+    <form align = "center" method = "POST" action = "{{url_for('update_employee_server')}}">
+        <h3>Employee number: <input type = text name = "e_num" required></input></h3>
+        <h3>Employee first name: <input type = text name = "e_fn" required></input></h3>
+        <h3>Employee Last name: <input type = text name = "e_ln" required></input></h3>
+        <h3>Emplyee DOB(YYYY-MM-DD): <input type = text name = "e_dob" required></input></h3>
+        <h3>Employee type: <input type = text name = "e_type" required></input></h3>
+        <h3>Employee salary: <input type = number name = "e_sal" required></input></h3>
+        <h3>team name: <input type = "text" name = "t_name" id = "t_name" required></input></h3>
+        <input type = "submit" value = "update_employee_server">
+    </form>
+</div>
+<table align = "center">
+    <tr>
+    {% for item in head %}
+    <th>{{item[0]}}</th>
+    {% endfor %}
+    </tr>
+    {% for row in res %}
+    <tr>
+        {% for i in row %}
+        <td>{{i}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

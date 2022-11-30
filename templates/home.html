@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<p class = "small outline">Hello, Welcome to an NFL database editor:</p>
+<button onclick="location.href='/show'" type="button">Show Tables</button><br>
+<button onclick="location.href='/insert'" type="button">Insert data</button><br>
+<button onclick="location.href='/delete'" type="button">Delete data</button><br>
+<button onclick="location.href='/update'" type="button">Update data</button><br>
+<button onclick="location.href='/find'" type="button">Find data</button><br>
+<button onclick="location.href='/query'" type="button">Query</button><br>
+<button onclick="location.href='/'" type="button">Back to login</button><br>
+{% endblock %}

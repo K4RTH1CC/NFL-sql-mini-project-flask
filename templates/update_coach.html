@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}update Main Page{% endblock %}
+{% block content %}
+<div>
+    <form align = "center" method = "POST" action = "{{url_for('update_coach_server')}}">
+        <h3>Employee number: <input type = "text" name = "e_num" required></input></h3>
+        <h3>Coach Position: <input type = "text" name = "c_pos" id = "c_pos" required></input></h3>
+        <h3>Team name: <input type = "text" name = "t_name" required></input></h3>
+        <input type = "submit" value = "update_coach_server">
+    </form>
+</div>
+<table align = "center">
+    <tr>
+    {% for item in head %}
+    <th>{{item[0]}}</th>
+    {% endfor %}
+    </tr>
+    {% for row in res %}
+    <tr>
+        {% for i in row %}
+        <td>{{i}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

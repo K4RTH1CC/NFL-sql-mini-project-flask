@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+button {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #2400f1;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  text-align: center;
+}
+
+
+button:disabled {
+  cursor: default;
+}
+
+button:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient(45deg, #2e3fdf, #14b3e4);
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+th {
+	text-align: left;
+}
+
+th {
+		background-color: #55608f;
+}
+
+tr:hover {
+		background-color: rgba(255,255,255,0.3);
+	}
+
+td {
+	position: relative;
+}
+td:hover:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255,255,255,0.2);
+        z-index: -1;
+    }
+
+.large {
+  font-size: 6rem;
+}
+    
+.small {
+  font-size: 2rem;
+}
+    
+.rise {
+  text-shadow: -0.01em -0.01em 0.01em #000;
+  animation: rise 2s ease-in-out 0.5s forwards;
+}
+    
+@keyframes rise {
+  to {
+    text-shadow: 0em 0.01em rgb(15, 157, 223), 0em 0.02em rgb(21, 185, 235), 0em 0.02em 0.03em rgb(23, 168, 179),
+      -0.01em 0.01em #333, -0.02em 0.02em #333, -0.03em 0.03em #333,
+      -0.04em 0.04em #333, -0.01em -0.01em 0.03em #000, -0.02em -0.02em 0.03em #000,
+      -0.03em -0.03em 0.03em #000;
+    transform: translateY(-0.025em) translateX(0.04em);
+  }
+}
+    
+.outline {
+  background-clip: text;
+  color: #181bc2;
+  animation: outline 1s ease-in-out 1.5s forwards;
+}
+    
+@keyframes outline {
+  from {
+    text-shadow: 0em -7em 10em #fff;
+  }
+  to {
+    text-shadow: 0 0.02em #fff, 0.02em 0 #fff, -0.02em 0 #fff, 0 -0.02em #fff;
+  }
+}
+p {
+  margin: auto;
+  font-family: "Audiowide", cursive;
+}
+    
+.box {
+  border: 1px black inset;
+  border-radius: 3cm;
+  background: linear-gradient(45deg, #ffffff, #1020d5);
+}

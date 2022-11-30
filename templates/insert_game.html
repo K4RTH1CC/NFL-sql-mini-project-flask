@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Insert Main Page{% endblock %}
+{% block content %}
+<div>
+    <form align = "center" method = "POST" action = "{{url_for('insert_game_server')}}">
+        <h3>Game Number: <input type = "text" name = "g_num" required></input></h3>
+        <h3>visiting team: <input type = "text" name = "vt" required></input></h3>
+        <h3>home team: <input type = "text" name = "ht" required></input></h3>
+        <h3>Season Year: <input type = "text" name = "s_year" required></input></h3>
+        <input type = "submit" value = "insert_game_server">
+    </form>
+</div>
+{% endblock %}
